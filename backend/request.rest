@@ -1,0 +1,46 @@
+GET http://localhost:5000/users
+###
+GET http://localhost:5000/subkategori
+###
+GET http://localhost:5000/users/1
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "email": "jamalatus@gmail.com",
+    "password": "password123"
+}
+###
+PATCH http://localhost:5000/transaksi/630
+Content-Type: application/json
+
+{
+    "jumlah": 15000,
+    "kategori_id": 1,
+    "deskripsi": "beli bubur"
+}
+###
+DELETE http://localhost:5000/users/1
+###
+DELETE http://localhost:5000/transaksi/1
+
+
+###
+POST http://localhost:5000/transaksi
+Content-Type: application/json
+
+{
+    "jumlah": 1000,
+    "deskripsi": "initial balance",
+    "kategori_id": 1,
+    "user_id": 1
+}
+###
+GET http://localhost:5000/kategori
+###
+GET http://localhost:5000/transaksi/grouped-by-date
+###
+GET http://localhost:5000/transaksi/kategori/1
+###
+GET http://localhost:5000/anggaran
